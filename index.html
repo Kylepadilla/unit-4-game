@@ -5,38 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Unit-4-game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="assets/javascript/javascript.js"></script> -->
 </head>
-
-<style>
-body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 34px;
-    background: url(../images/background-space.png) ;
-  }
-
-.container-fluid {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 34px;
-    color: #dadd13;
-}
-.container-inline {
-    float: left;
-    margin-left: 15px;
-    
-}
-
-.col-sm {
-    float: left
-
-}
-</style>
-
 <body>
     <div class = "container">
         <header>
@@ -58,39 +32,76 @@ body {
                             </li>
                           </ul>
                           <span class="navbar-text">
-                            Welcome to #placeholder game!
+                            starwars game
                           </span>
                         </div>
                       </nav>
         </header>
         <div>
-            <div class="container-fludid">
+            <div class="welcome">
             <h1>Welcome to the starwars game!</h1>
-                ...
+                How to play:
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, natus! Ex optio quis temporibus explicabo, corrupti, quos neque accusamus beatae exercitationem delectus fugiat illum ipsum dolorem natus eum veniam amet?
             </div>         
     </div>
 
-    <!-- below you find the ally choices -->
+    <!-- below you will find the character choices -->
+
+    <div class="CharList">
+       <p id="title-character"> Chose Your Character!</p>
+
+    <div class="CharList-Light">
+        <p id= "lightside"> Light Side</p>
     <div class="row">
             <div class="col-lg-12">
                   <div class="allyChoice-1">
-                          <h3> Darth Vader </h3>
-                          <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                          <h4>heath: [#]</h4>
-                          </div>
+                          <h3> Luke Skywalker </h3>
+                          <img src="assets/images/Skywalker.png" class="character-choices" alt="Skywalker">
+                          <h4>Health Points(HP):<span id="HP"></span></h4>
+                          <h4>Attack Power(AP):<span id="AP"></span></h4>
+                  </div>
                     <div class="allyChoice-2">
-                          <h3> Darth Vader </h3>
-                          <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                          <h4>heath: [#]</h4>
-                          </div>
+                          <h3> Han Solo </h3>
+                          <img src="assets/images/Solo.png" class="character-choices" alt="Han Solo">
+                          <h4>Health Points(HP):<span id="HP"></span></h4>
+                          <h4>Attack Power(AP):<span id="AP"></span></h4>
+                  </div>
                     <div class="allyChoice-3">
-                            <h3> Darth Vader </h3>
-                            <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                            <h4>heath: [#]</h4>
-                            </div> 
+                            <h3> Yoda </h3>
+                            <img src="assets/images/Yoda.png" class="character-choices" alt="Darth">
+                            <h4>Health Points(HP):<span id="HP"></span></h4>
+                            <h4>Attack Power(AP):<span id="AP"></span></h4>
+                      </div> 
                             </div>
     </div>
-
+    </div>
+    <br>
+    <div class="CharList-Dark">
+        Dark Side
+            <div class="row">
+                    <div class="col-lg-12">
+                          <div id="Vader">
+                                  <h3> Darth Vader </h3>
+                                  <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
+                                  <h4>Health Points(HP):<span id="HP"></span></h4>
+                                  <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  </div>
+                            <div id="Boba">
+                                  <h3> Boba Fett </h3>
+                                  <img src="assets/images/BobaFett.png" class="character-choices" alt="Boba Fett">
+                                  <h4>Health Points:<span id="HP"></span></h4>
+                                  <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  </div>
+                            <div id="allyChoice-3">
+                                  <h3> Jabadahut </h3>
+                                  <img src="assets/images/Jabada.png" class="character-choices" alt="Jabadahut">
+                                  <h4>Health Points:<span id="HP"></span></h4>
+                                  <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  </div> 
+                                  </div>
+            </div>
+            </div>
+    </div>
     <!-- <div class="container">
 
             <div class="row">
@@ -121,7 +132,7 @@ body {
                             <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
                             <h4>heath: [#]</h4>
                             </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -132,15 +143,15 @@ body {
                     <p>Choose Your opponent</p>
                   </div>
                   
-                </div>
+                </div> -->
               </div>
         
         <hr>
 
 
-<script type="text/javascript">
+<!-- <script src="assets/javascript/javascript.js"> -->
+    <!-- <script src="assets/javascript/javascript.js">
 
-        $(document).ready(function(){
 
         // character List
         var LightsideChar = ["Luke Skywalker", "Han Solo", "Yoda"]
@@ -162,17 +173,21 @@ body {
         var deaths
         var kdRatio
 
-        
+        // player Selection
+        var LightsideChar = document.getElementById("CharList-Light");
+
+        for (var i = 0; i < Char.length; i++) {
+
+        var DarksideChar = document.getElementById("CharList-Dark"); -->
 
 
-
-
-
-            $("allyChoice").click(function(){
-                $(".allychoice").hide(1000);
-              });
-            });
-</script>
+<!-- 
+        // $(document).ready(function(){
+        //     $("allyChoice").click(function(){
+        //         $(".allychoice").hide(1000);
+        //       });
+        //     });
+</script> -->
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
