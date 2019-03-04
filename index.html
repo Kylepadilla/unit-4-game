@@ -12,144 +12,111 @@
     <!-- <script src="assets/javascript/javascript.js"></script> -->
 </head>
 <body>
+<audio src="assets/audio/John Williams - Duel of the Fates.mp3" controls> </audio>
     <div class = "container">
         <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="#">Unit-4-Game!</a>
+                        <a class="navbar-brand" href="#">UCFCodingBootcamp.Games</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarText">
                           <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                              <a class="nav-link" href="#">unit 4 game <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="index.html">Starwars Game <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Support</a>
+                              <a class="nav-link" href="support.html">Support</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Donate Toady!</a>
+                              <a class="nav-link" href="donate.html">Donate Toady!</a>
                             </li>
                           </ul>
                           <span class="navbar-text">
-                            starwars game
                           </span>
                         </div>
                       </nav>
         </header>
         <div>
-            <div class="welcome">
             <h1>Welcome to the starwars game!</h1>
-                How to play:
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, natus! Ex optio quis temporibus explicabo, corrupti, quos neque accusamus beatae exercitationem delectus fugiat illum ipsum dolorem natus eum veniam amet?
+            <div class="welcome">
+
+                HOW TO PLAY:
+                <ol>
+                <li>Begin by selecting a  charcter from the light or dark side. </li>
+                <li>Then, select an opponent from the opposite side. </li>
+                <li>Pay attention to your Health Points(HP) and your Attack Points(AP).</li> 
+                <li>Player stats are set at the begining of the game. Enemy stats are assigned a random value.</li>
+                <li> your enemy and drain their HP to win. Have fun!</li>
+                </ol>
             </div>         
     </div>
 
-    <!-- below you will find the character choices -->
+    <!-- character choices -->
 
     <div class="CharList">
        <p id="title-character"> Chose Your Character!</p>
-
+    <div class="row" id="light">
     <div class="CharList-Light">
-        <p id= "lightside"> Light Side</p>
-    <div class="row">
-            <div class="col-lg-12">
-                  <div class="allyChoice-1">
-                          <h3> Luke Skywalker </h3>
+        <p id= "sideSelect"> Light Side</p>
+        <div class="char" id="skywalker">
+                     <h3> Luke Skywalker </h3>
                           <img src="assets/images/Skywalker.png" class="character-choices" alt="Skywalker">
                           <h4>Health Points(HP):<span id="HP"></span></h4>
                           <h4>Attack Power(AP):<span id="AP"></span></h4>
                   </div>
-                    <div class="allyChoice-2">
-                          <h3> Han Solo </h3>
+                  <div class="char" id="solo">
+                      <h3> Han Solo </h3>
                           <img src="assets/images/Solo.png" class="character-choices" alt="Han Solo">
                           <h4>Health Points(HP):<span id="HP"></span></h4>
                           <h4>Attack Power(AP):<span id="AP"></span></h4>
                   </div>
-                    <div class="allyChoice-3">
-                            <h3> Yoda </h3>
+                  <div class="char" id="vader">
+                      <h3> Yoda </h3>
                             <img src="assets/images/Yoda.png" class="character-choices" alt="Darth">
                             <h4>Health Points(HP):<span id="HP"></span></h4>
                             <h4>Attack Power(AP):<span id="AP"></span></h4>
                       </div> 
                             </div>
     </div>
+    
+    <!-- Below is where the battle takes place! -->
+    <div class="row" id="selection">
+          <div class="map">
+            <p id="lava map"> Thunder Dome</p>
+            
+
+          </div>
     </div>
-    <br>
+<!-- character list for dark side -->
+    <div class="row" id="dark">
     <div class="CharList-Dark">
-        Dark Side
-            <div class="row">
-                    <div class="col-lg-12">
-                          <div id="Vader">
+        <p id = "sideSelect"> Dark Side</p>
+                          <div class="char" id="vader">
                                   <h3> Darth Vader </h3>
                                   <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
                                   <h4>Health Points(HP):<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
                                   </div>
-                            <div id="Boba">
+                          <div class="char" id="boba">
                                   <h3> Boba Fett </h3>
                                   <img src="assets/images/BobaFett.png" class="character-choices" alt="Boba Fett">
                                   <h4>Health Points:<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
                                   </div>
-                            <div id="allyChoice-3">
+                          <div class="char" id="yoda">
                                   <h3> Jabadahut </h3>
                                   <img src="assets/images/Jabada.png" class="character-choices" alt="Jabadahut">
                                   <h4>Health Points:<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
                                   </div> 
-                                  </div>
-            </div>
-            </div>
-    </div>
-    <!-- <div class="container">
-
-            <div class="row">
-              <div class="col-sm">
-                    <div class="allyChoice-1">
-                            <h3> Darth Vader </h3>
-                            <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                            <h4>heath: [#]</h4>
-                            </div>
-              </div>
-              <div class="col-sm">
-                    <div class="allyChoice-1">
-                            <h3> Darth Vader </h3>
-                            <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                            <h4>heath: [#]</h4>
-                            </div>
-              </div>
-              <div class="col-sm">
-                    <div class="allyChoice-1">
-                            <h3> Darth Vader </h3>
-                            <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                            <h4>heath: [#]</h4>
-                            </div>
-              </div>
-                <div class="col-sm">
-                    <div class="allyChoice-1">
-                            <h3> Darth Vader </h3>
-                            <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
-                            <h4>heath: [#]</h4>
-                            </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div class="container">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <p>Choose Your opponent</p>
-                  </div>
-                  
-                </div> -->
-              </div>
-        
-        <hr>
+      </div>
 
 
-<!-- <script src="assets/javascript/javascript.js"> -->
+
+      <!-- javascript is shown below -->
+
+<script src="assets/javascript/javascript.js"> -->
     <!-- <script src="assets/javascript/javascript.js">
 
 
@@ -174,11 +141,11 @@
         var kdRatio
 
         // player Selection
-        var LightsideChar = document.getElementById("CharList-Light");
+        var LightsideChar = document.getElementById("#");
 
         for (var i = 0; i < Char.length; i++) {
 
-        var DarksideChar = document.getElementById("CharList-Dark"); -->
+        var DarksideChar = document.getElementById("#"); -->
 
 
 <!-- 
@@ -187,7 +154,7 @@
         //         $(".allychoice").hide(1000);
         //       });
         //     });
-</script> -->
+</script>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
