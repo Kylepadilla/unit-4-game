@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="assets/javascript/javascript.js"></script> -->
@@ -48,6 +49,7 @@
                 <li>Pay attention to your Health Points(HP) and your Attack Points(AP).</li> 
                 <li>Player stats are set at the begining of the game. Enemy stats are assigned a random value.</li>
                 <li> your enemy and drain their HP to win. Have fun!</li>
+                <li>Click here to reset the game <span><button type ="button" id="reset"> reset</button></span></li>
                 </ol>
             </div>         
     </div>
@@ -64,27 +66,53 @@
                           <img src="assets/images/Skywalker.png" class="character-choices" alt="Skywalker">
                           <h4>Health Points(HP):<span id="HP"></span></h4>
                           <h4>Attack Power(AP):<span id="AP"></span></h4>
+                          <button type="button" id="button-sky">Select</button>
                   </div>
                   <div class="char" id="solo">
                       <h3> Han Solo </h3>
                           <img src="assets/images/Solo.png" class="character-choices" alt="Han Solo">
                           <h4>Health Points(HP):<span id="HP"></span></h4>
                           <h4>Attack Power(AP):<span id="AP"></span></h4>
+                          <button type="button-solo" id="button-solo">Select</button>
                   </div>
-                  <div class="char" id="vader">
+                  <div class="char" id="yoda">
                       <h3> Yoda </h3>
                             <img src="assets/images/Yoda.png" class="character-choices" alt="Darth">
                             <h4>Health Points(HP):<span id="HP"></span></h4>
                             <h4>Attack Power(AP):<span id="AP"></span></h4>
+                            <button type="button-yoda" id="button-yoda">Select</button>
                       </div> 
                             </div>
     </div>
     
     <!-- Below is where the battle takes place! -->
-    <div class="row" id="selection">
+    <div class="row" id="map">
           <div class="map">
             <p id="lava map"> Thunder Dome</p>
-            
+            <div class="col" id= "player">
+              <p> Player</p>
+              <p> Health Points:<span id="playerHP"></span></p>
+              <P> Attack Power:<span  id= "playerAP"></span></P>
+                <!-- <img src="assets/images/Skywalker.png" class="character-choices" id="skywalkerSelect" alt="Skywalker">
+                <img src="assets/images/Solo.png" class="character-choices" alt="Han Solo">
+                <img src="assets/images/Yoda.png" class="character-choices" alt="Yoda">
+                <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
+                <img src="assets/images/BobaFett.png" class="character-choices" alt="Boba Fett">
+                <img src="assets/images/Jabada.png" class="character-choices" alt="Jabadahut"> -->
+            </div>
+            <div class="col" id="enemy">
+              <p> Enemy</p>
+              <p> Health Points:<span id="enemyHP"></span></p>
+              <P> Attack Power:<span  id= "enemyAP"></span></P>
+
+              <!-- <img src="assets/images/Skywalker.png" class="character-choices" alt="Skywalker">
+              <img src="assets/images/Solo.png" class="character-choices" alt="Han Solo">
+              <img src="assets/images/Yoda.png" class="character-choices" alt="Yoda">
+              <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
+              <img src="assets/images/BobaFett.png" class="character-choices" alt="Boba Fett">
+              <img src="assets/images/Jabada.png" class="character-choices" alt="Jabadahut"> -->
+            </div>
+                
 
           </div>
     </div>
@@ -97,18 +125,21 @@
                                   <img src="assets/images/Darth.png" class="character-choices" alt="Darth">
                                   <h4>Health Points(HP):<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  <button type="button" id="button-vader">Select</button>
                                   </div>
                           <div class="char" id="boba">
                                   <h3> Boba Fett </h3>
                                   <img src="assets/images/BobaFett.png" class="character-choices" alt="Boba Fett">
                                   <h4>Health Points:<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  <button type="button" id="button-boba">Select</button>
                                   </div>
-                          <div class="char" id="yoda">
+                          <div class="char" id="jaba">
                                   <h3> Jabadahut </h3>
                                   <img src="assets/images/Jabada.png" class="character-choices" alt="Jabadahut">
                                   <h4>Health Points:<span id="HP"></span></h4>
                                   <h4>Attack Power(AP):<span id="AP"></span></h4>
+                                  <button type="button" id="button-jaba">Select</button>
                                   </div> 
       </div>
 
@@ -116,44 +147,38 @@
 
       <!-- javascript is shown below -->
 
-<script src="assets/javascript/javascript.js"> -->
-    <!-- <script src="assets/javascript/javascript.js">
+<script src="assets/javascript/javascript.js"> 
 
-
-        // character List
-        var LightsideChar = ["Luke Skywalker", "Han Solo", "Yoda"]
-        var DarksideChar = ["Darth Vader", "Boba Fet", "Jabadahut"]
+        // // character List
+        // var LightsideChar = ["Luke Skywalker", "Han Solo", "Yoda"]
+        // var DarksideChar = ["Darth Vader", "Boba Fet", "Jabadahut"]
         
-        // set player stats
-        var allyChoice = []
-        var playerHP = 150
-        var attackPower = []
+        // // set player stats
+        // var allyChoice = []
+        // var playerHP = 150
+        // var attackPower = []
 
-        // set enemy stats
-        var enemy = []
-        var enemyHP = []
-        var enemyAP = []
+        // // set enemy stats
+        // var enemy = []
+        // var enemyHP = []
+        // var enemyAP = []
         
-        // Scoreboard
-        var Scoreboard
-        var kills
-        var deaths
-        var kdRatio
+        // // Scoreboard
+        // var Scoreboard
+        // var kills
+        // var deaths
+        // var kdRatio
 
-        // player Selection
-        var LightsideChar = document.getElementById("#");
+        // // player Selection
+        // var LightsideChar = document.getElementById("#");
 
-        for (var i = 0; i < Char.length; i++) {
+        // for (var i = 0; i < Char.length; i++) {
 
-        var DarksideChar = document.getElementById("#"); -->
+        // var DarksideChar = document.getElementById("#"); -->
 
 
-<!-- 
-        // $(document).ready(function(){
-        //     $("allyChoice").click(function(){
-        //         $(".allychoice").hide(1000);
-        //       });
-        //     });
+
+
 </script>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
