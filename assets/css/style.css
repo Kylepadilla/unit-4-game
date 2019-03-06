@@ -15,8 +15,7 @@ h1{
     background-color: rgb(110, 110, 110) !important;
 }
 .welcome {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 18px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     line-height: 34px;
     color: #dadd13;
     box-align: center;
@@ -117,4 +116,13 @@ h1{
         margin-left: 60px;
 
 
+}
+
+.attack {
+    margin-top: 25px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#reset {
+    font-family: 'Press Start 2P', cursive;
 }
