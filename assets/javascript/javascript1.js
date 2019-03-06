@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 var character = ["skywalker", "solo", "yoda", "vader", "boba", "jaba"]
 
-var player = {
+var player = {}
     playerChar={},
     playerHP = 150,
     playerAP = 15,
@@ -58,17 +58,20 @@ function enemyselect(){
 
 
 // sets enemy stats 
-function setenemystat() {
-    enemy.HP = {};
-    enemy.AP = {};
-    
-    if (playerSelect === false) {
-        for (var i = 0; i < 10; i++) {
-            enemy.HP = i 
-        }
-    }
 
-}
+$(".char").on("click", function() {
+
+    enemy.HP = {};
+    
+    for (var i = 0; i < 200; i++) {
+        var randomStat = Math.floor(Math.random() * 200) + 1;
+            enemyHP = randomStat+enemy.HP;
+
+
+            console,log(enemy.HP);
+    }
+    $("#HP").append(parseInt(this.value))
+  }
 
 
 // counts player stats
